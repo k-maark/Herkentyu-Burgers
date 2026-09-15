@@ -86,7 +86,8 @@
 <!-- ========== FOOTER ========== -->
 <footer class="bg-charcoal3 border-t border-cream/10 px-6 py-9">
   <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
-    <p class="text-muted text-sm">© 2026 Rozsdás Rákolló Kft.</p>
+    <p class="text-muted text-sm">&copy; <span id="year"></span> Rozsdás Rákolló Kft.</p>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
     <a data-nav href="nyitvatartas.html" class="pill text-nav">Nyitvatartás</a>
   </div>
 </footer>
