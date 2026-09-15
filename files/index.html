@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rozsdás Rákolló | Amerikai Konyha Étterem Komáromban</title>
+<meta name="description" content="Fedezze fel a Rozsdás Rákollót Komáromban: burgerek, kebab, falafel és házias desszertek. Elvitelre, kiszállításra és helyben fogyasztásra is várjuk." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Rozsdás Rákolló Kft." />
+<link rel="canonical" href="https://www.rozsdasrakollo.hu/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:site_name" content="Rozsdás Rákolló" />
+<meta property="og:title" content="Rozsdás Rákolló | Amerikai Konyha Étterem Komáromban" />
+<meta property="og:description" content="Fedezze fel a Rozsdás Rákollót Komáromban: burgerek, kebab, falafel és házias desszertek. Elvitelre, kiszállításra és helyben fogyasztásra is várjuk." />
+<meta property="og:url" content="https://www.rozsdasrakollo.hu/" />
+<meta property="og:image" content="https://www.rozsdasrakollo.hu/assets/img/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="hu_HU" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Rozsdás Rákolló | Amerikai Konyha Étterem Komáromban" />
+<meta name="twitter:description" content="Fedezze fel a Rozsdás Rákollót Komáromban: burgerek, kebab, falafel és házias desszertek." />
+<meta name="twitter:image" content="https://www.rozsdasrakollo.hu/assets/img/og-image.jpg" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Rozsdás Rákolló",
+  "image": "https://www.rozsdasrakollo.hu/assets/img/og-image.jpg",
+  "url": "https://www.rozsdasrakollo.hu/",
+  "telephone": "+36-34-444-4400",
+  "email": "info@rozsdasrakollo.hu",
+  "servesCuisine": ["Amerikai", "Burger", "Kebab", "Falafel"],
+  "priceRange": "$$",
+  "menu": "https://www.rozsdasrakollo.hu/menu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Erzsébet tér 2.",
+    "addressLocality": "Komárom",
+    "postalCode": "2900",
+    "addressCountry": "HU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "[47.747662]",
+    "longitude": "[18.118396]"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "12:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/rozsdasrakollokomarom",
+    "https://www.instagram.com/rozsdasrakollokomarom"
+  ]
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1b17'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23d3a54c' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-charcoal text-cream font-body antialiased">
+
+<!-- ========== HEADER ========== -->
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50">
+  <div class="header-inner max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <span class="font-display text-[1.05rem] sm:text-logo font-bold tracking-wide">ROZSDÁS RÁKOLLÓ</span>
+      <span id="openBadge" class="badge" title="Nyitva">
+        <span class="dot animate-dot"></span>
+        <span id="openBadgeText">Nyitva</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-3">
+      <a data-nav href="elerhetosegek.html" class="pill text-nav">Elérhetőségek</a>
+      <a data-nav href="ettermeink.html" class="pill text-nav">Éttermeink</a>
+      <a data-nav href="menu.html" class="pill text-nav">Menü</a>
+      <a data-nav href="index.html" class="pill text-nav">Főoldal</a>
+    </nav>
+
+    <button id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menü megnyitása" class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-[5px]">
+      <span class="block h-[1.5px] w-6 bg-cream transition-transform duration-300"></span>
+      <span class="block h-[1.5px] w-6 bg-cream transition-opacity duration-300"></span>
+      <span class="block h-[1.5px] w-6 bg-cream transition-transform duration-300"></span>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden px-6">
+    <div class="flex flex-col gap-2.5 pb-6 pt-1">
+      <a data-nav href="elerhetosegek.html" class="pill text-nav w-full">Elérhetőségek</a>
+      <a data-nav href="ettermeink.html" class="pill text-nav w-full">Éttermeink</a>
+      <a data-nav href="menu.html" class="pill text-nav w-full">Menü</a>
+      <a data-nav href="index.html" class="pill text-nav w-full">Főoldal</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="relative pt-40 pb-28 md:pt-48 md:pb-40 px-6 overflow-hidden">
+  <div class="absolute inset-0 hero-blobs"></div>
+  <div class="absolute inset-0 hero-vignette"></div>
+
+  <div class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[420px] xl:w-[540px] hidden lg:block animate-drift" aria-hidden="true">
+    <div class="absolute inset-0 m-auto w-[70%] h-[70%] rounded-full bg-gold/25 blur-3xl"></div>
+    <svg viewBox="0 0 400 300" class="relative w-full h-auto drop-shadow-[0_30px_45px_rgba(0,0,0,0.45)]">
+      <defs>
+        <linearGradient id="bun" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f2b569" />
+          <stop offset="100%" stop-color="#d9903f" />
+        </linearGradient>
+        <linearGradient id="patty" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7a4527" />
+          <stop offset="100%" stop-color="#54301a" />
+        </linearGradient>
+      </defs>
+
+      <ellipse cx="200" cy="258" rx="150" ry="30" fill="url(#bun)" />
+      <ellipse cx="200" cy="250" rx="148" ry="12" fill="#c97f36" opacity=".5" />
+
+      <path d="M52 230 Q78 206 104 230 T156 230 T208 230 T260 230 T312 230 T348 230 L348 250 Q200 270 52 250 Z" fill="#8bbf5e" />
+
+      <ellipse cx="200" cy="210" rx="140" ry="15" fill="#c9463a" />
+      <ellipse cx="200" cy="205" rx="140" ry="6" fill="#e0685c" opacity=".7" />
+
+      <path d="M58 196 Q78 222 98 196 Q118 224 138 196 Q158 224 178 196 Q198 224 218 196 Q238 224 258 196 Q278 224 298 196 Q318 222 338 196 L338 174 L58 174 Z" fill="#f3c53f" />
+
+      <ellipse cx="200" cy="170" rx="146" ry="25" fill="url(#patty)" />
+
+      <path d="M56 148 Q56 36 200 36 Q344 36 344 148 Q344 166 322 168 L78 168 Q56 166 56 148 Z" fill="url(#bun)" />
+      <ellipse cx="200" cy="148" rx="150" ry="17" fill="#e8a24d" />
+
+      <g fill="#fbe9c9">
+        <ellipse cx="140" cy="88" rx="6" ry="3" transform="rotate(-20 140 88)" />
+        <ellipse cx="200" cy="66" rx="6" ry="3" transform="rotate(8 200 66)" />
+        <ellipse cx="260" cy="92" rx="6" ry="3" transform="rotate(-14 260 92)" />
+        <ellipse cx="168" cy="113" rx="6" ry="3" transform="rotate(24 168 113)" />
+        <ellipse cx="236" cy="118" rx="6" ry="3" transform="rotate(-9 236 118)" />
+        <ellipse cx="200" cy="104" rx="6" ry="3" transform="rotate(4 200 104)" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 class="font-display font-bold text-h1 text-cream">
+      <span class="block" data-reveal>Új élményre vágysz?</span>
+      <span class="block" data-reveal style="transition-delay:.12s">Akkor jó helyen jársz!</span>
+    </h1>
+    <p class="font-display italic text-script text-gold mt-7" data-reveal style="transition-delay:.26s">
+      Üdvözlünk a Rozsdás Rákollóban
+    </p>
+  </div>
+</section>
+
+<!-- ========== CONTENT ========== -->
+<main class="bg-charcoal2 px-6 py-24 md:py-32">
+  <div class="max-w-prose mx-auto space-y-24 md:space-y-28">
+
+    <article data-reveal>
+      <h2 class="font-display font-semibold text-h2 text-cream text-center">
+        Elvitelre és kiszállításra is rendelhet <span class="text-muted font-normal">|</span> Komárom
+      </h2>
+      <div class="mt-7 space-y-5 text-body text-muted text-center">
+        <p>Töltse el kényelmesen ebédszünetét, és fogyasszon könnyed, letisztult ételeket: örömmel várja a Rozsdás Rákolló, ha kedvet kapott. Falatozónk kedvező áron kínálja Önnek azt, amire vágyik. Élvezze változatos és ínycsiklandozó fogásainkat, és válasszon hozzájuk illő italkínálatunkból.</p>
+        <p>Halal és vegetáriánus ételkülönlegességek is színesítik étlapunkat, hogy minél változatosabb ízekkel kényeztessük Önt. Segítünk Önnek, hogy étkezés során szem előtt tudja tartani egészségét, és tudatosodjon Önben, hogy mennyire finomak lehetnek az egészséges ételek.</p>
+        <p>Az étkezés élményének fokozása érdekében kényelmes kültéri helyiséggel is várjuk Önt.</p>
+      </div>
+    </article>
+
+    <article data-reveal>
+      <h2 class="font-display font-semibold text-h2 text-cream text-center">Kiváló falatozó sokoldalú étlappal</h2>
+      <div class="mt-7 space-y-5 text-body text-muted text-center">
+        <p>Amerikai konyhánk autentikus fogásokkal várja Önt. Saláta büfénk és finom gyorsételeink különleges ízvilágának köszönhetően vált ismertté. Feltétlenül kóstolja meg falafel ételeinket vagy rendkívül ízletes kebabjainkat, valamint frissítő söreinket vagy forró teáinkat.</p>
+        <p>Az édességűek is találnak kedvükre valót — mennyei desszertjeink rendkívül ízletesek. Szenvedélyünk a vendéglátás: térjen be hozzánk ebédre vagy vacsorára, és töltsön el nálunk egy nyugodt délutánt. Használja ingyenes WIFI-szolgáltatásunkat, hogy megoszthassa képeit.</p>
+      </div>
+    </article>
+
+    <article data-reveal>
+      <h2 class="font-display font-semibold text-h2 text-cream text-center">Használja ki a parkoló adta lehetőségeket</h2>
+      <div class="mt-7 space-y-5 text-body text-muted text-center">
+        <p>Használja a falatozó előtt található ingyenes parkolót. Örömmel látjuk kiskedvenceit vendéglőnkben is — látogasson el hozzánk! Örömünkre szolgál, ha este vendégül láthatjuk vendéglőnkben. A következő fizetési lehetőségeket kínáljuk: érintésmentes fizetés, Mastercard, VISA, SZÉP kártya, Apple Pay, Maestro és készpénz.</p>
+        <p>Ha inkább kényelmesen, otthon fogyasztaná el fogásainkat, igénybe veheti futárszolgálatunkat, vagy elvitelre is kérheti kiválasztott ételeinket. Szívesen felszolgálnánk kulináris különlegességeinket zárt körű rendezvényén is — vegye igénybe catering-szolgáltatásunkat. Minden nap nyitva tartunk.</p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-charcoal3 border-t border-cream/10 px-6 py-9">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
+    <p class="text-muted text-sm">© 2026 Rozsdás Rákolló Kft.</p>
+    <a data-nav href="nyitvatartas.html" class="pill text-nav">Nyitvatartás</a>
+  </div>
+</footer>
+
+<script src="assets/js/hours.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* ---------- base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #1c1b17;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #d3a54c;
+  color: #1c1b17;
+}
+
+:focus-visible {
+  outline: 2px solid #d3a54c;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- nav pills ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.35rem;
+  border-radius: 999px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: #f4efe4;
+  border: 1px solid rgba(244, 239, 228, 0.16);
+  background: rgba(244, 239, 228, 0.03);
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease, transform .25s ease;
+  white-space: nowrap;
+}
+.pill:hover {
+  border-color: rgba(244, 239, 228, 0.4);
+  background: rgba(244, 239, 228, 0.08);
+  transform: translateY(-1px);
+}
+.pill:active {
+  transform: translateY(0);
+}
+.pill-active,
+.pill-active:hover {
+  background: #f4efe4;
+  color: #1c1b17;
+  border-color: #f4efe4;
+}
+
+/* ---------- open badge ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.85rem 0.3rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(130, 176, 108, 0.45);
+  background: rgba(130, 176, 108, 0.1);
+  color: #9ecb87;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+}
+.badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #9ecb87;
+  box-shadow: 0 0 0 3px rgba(130, 176, 108, 0.18);
+}
+.badge.is-closed {
+  border-color: rgba(201, 109, 93, 0.45);
+  background: rgba(201, 109, 93, 0.12);
+  color: #e2a396;
+}
+.badge.is-closed .dot {
+  background: #e2a396;
+  box-shadow: 0 0 0 3px rgba(201, 109, 93, 0.18);
+  animation: none;
+}
+
+/* ---------- hours status banner (Nyitvatartás page) ---------- */
+.status-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(130, 176, 108, 0.45);
+  background: rgba(130, 176, 108, 0.1);
+  color: #9ecb87;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+.status-banner .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #9ecb87;
+  box-shadow: 0 0 0 4px rgba(130, 176, 108, 0.18);
+}
+.status-banner.is-closed {
+  border-color: rgba(201, 109, 93, 0.45);
+  background: rgba(201, 109, 93, 0.12);
+  color: #e2a396;
+}
+.status-banner.is-closed .dot {
+  background: #e2a396;
+  box-shadow: 0 0 0 4px rgba(201, 109, 93, 0.18);
+  animation: none;
+}
+
+/* ---------- hours table ---------- */
+.hours-row {
+  transition: background-color .3s ease, padding-left .3s ease;
+}
+.hours-row .hours-day {
+  transition: color .3s ease;
+}
+.hours-row.is-today {
+  background: rgba(211, 165, 76, 0.06);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  border-radius: 0.5rem;
+}
+.hours-row.is-today .hours-day {
+  color: #d3a54c;
+  font-weight: 600;
+}
+.hours-row.is-today .hours-day::after {
+  content: 'ma';
+  margin-left: 0.55rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: .02em;
+  color: #1c1b17;
+  background: #d3a54c;
+  vertical-align: middle;
+}
+
+/* ---------- scroll reveal ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .9s cubic-bezier(.16,.8,.4,1), transform .9s cubic-bezier(.16,.8,.4,1);
+}
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- page transition ---------- */
+body {
+  opacity: 0;
+  animation: pageIn .6s ease .05s forwards;
+}
+@keyframes pageIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+html.leave body {
+  animation: none;
+  transition: opacity .32s ease;
+  opacity: 0;
+}
+
+/* ---------- header shrink on scroll ---------- */
+#siteHeader {
+  transition: background-color .4s ease, box-shadow .4s ease, border-color .4s ease;
+  background-color: rgba(28, 27, 23, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(244, 239, 228, 0.07);
+}
+#siteHeader .header-inner {
+  transition: padding .4s ease;
+}
+#siteHeader.scrolled {
+  background-color: rgba(20, 19, 16, 0.92);
+  box-shadow: 0 10px 30px -14px rgba(0,0,0,.55);
+}
+#siteHeader.scrolled .header-inner {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* ---------- hero backdrop ---------- */
+.hero-blobs {
+  background:
+    radial-gradient(ellipse 55% 60% at 18% 20%, rgba(180, 60, 50, .35), transparent 60%),
+    radial-gradient(ellipse 45% 55% at 8% 85%, rgba(90, 40, 40, .3), transparent 65%),
+    radial-gradient(ellipse 60% 70% at 85% 45%, rgba(120, 70, 30, .28), transparent 65%),
+    linear-gradient(180deg, #1c1b17 0%, #201f1a 60%, #1c1b17 100%);
+  filter: blur(2px);
+}
+.hero-vignette {
+  background: radial-gradient(120% 90% at 50% 10%, transparent 35%, rgba(20,19,16,.55) 78%, #1c1b17 100%);
+}
+
+/* ---------- mobile nav ---------- */
+#mobileMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .45s cubic-bezier(.16,.8,.4,1);
+}
+#mobileMenu.open {
+  max-height: 20rem;
+}
+
+/* ---------- hamburger -> close ---------- */
+#menuToggle span { transform-origin: center; }
+#menuToggle.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+#menuToggle.is-open span:nth-child(2) { opacity: 0; }
+#menuToggle.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ---------- small phones ---------- */
+@media (max-width: 380px) {
+  .badge {
+    padding: 0.25rem 0.6rem 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+  body { opacity: 1 !important; animation: none !important; }
+}
