@@ -1,4 +1,12 @@
 /* ---------- base ---------- */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -241,14 +249,4 @@ html.leave body {
   }
   [data-reveal] { opacity: 1; transform: none; }
   body { opacity: 1 !important; animation: none !important; }
-}
-
-
-/* ---------- no select ---------- */
-.no-select {
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -ms-touch-select: none;
-  -webkit-user-select: none;
 }
