@@ -220,7 +220,7 @@ html.leave body {
 }
 .game-section,
 .menu-section {
-  max-width: 72rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 .section-heading {
@@ -239,7 +239,7 @@ html.leave body {
 }
 .game-frame-wrap {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
   border: 1px solid rgba(211, 165, 76, .35);
   border-radius: .5rem;
@@ -258,75 +258,77 @@ html.leave body {
 .menu-heading {
   margin-bottom: 3.5rem;
 }
-.menu-category + .menu-category {
-  margin-top: 4rem;
+.menu-table-scroll {
+  overflow-x: auto;
+  border: 1px solid rgba(244, 239, 228, .14);
+  border-radius: .45rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
 }
-.category-title {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: .85rem;
-  border-bottom: 1px solid rgba(211, 165, 76, .45);
-}
-.category-title span {
-  color: #aaa398;
+.menu-table {
+  width: 100%;
+  min-width: 62rem;
+  border-collapse: collapse;
   font-family: 'Lora', serif;
+  text-align: left;
+}
+.menu-table th,
+.menu-table td {
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid rgba(244, 239, 228, .09);
+  color: #c3bdb2;
   font-size: .9rem;
-  font-style: italic;
+  line-height: 1.5;
+  vertical-align: top;
 }
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.25rem;
+.menu-table thead th {
+  background: rgba(211, 165, 76, .16);
+  color: #f4efe4;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-.menu-card {
-  min-height: 11rem;
-  padding: 1.35rem;
-  border: 1px solid rgba(244, 239, 228, .12);
-  border-radius: .4rem;
-  background: rgba(244, 239, 228, .035);
-  transition: border-color .3s ease, transform .3s ease, background-color .3s ease;
+.menu-table tbody tr:not(.menu-category-row):hover {
+  background: rgba(244, 239, 228, .045);
 }
-.menu-card:hover {
-  border-color: rgba(211, 165, 76, .5);
-  background: rgba(244, 239, 228, .06);
-  transform: translateY(-3px);
+.menu-table tbody tr:last-child td,
+.menu-table tbody tr:last-child th {
+  border-bottom: 0;
 }
-.menu-card-top {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: .75rem;
-}
-.menu-card h4 {
+.menu-table tbody th[scope="row"] {
+  min-width: 12rem;
   color: #f4efe4;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   font-weight: 600;
-  line-height: 1.2;
+  white-space: nowrap;
 }
-.menu-card strong {
-  flex-shrink: 0;
-  color: #d3a54c;
-  font-family: 'Lora', serif;
-  font-size: .95rem;
-  font-weight: 600;
-}
-.ingredients {
-  margin-top: 1rem;
-  color: #c3bdb2;
-  font-family: 'Lora', serif;
-  font-size: .93rem;
-  line-height: 1.65;
-}
-.allergens {
-  margin-top: 1rem;
+.menu-table tbody td:first-child {
   color: #8f8980;
+  white-space: nowrap;
+}
+.menu-table .price {
+  color: #d3a54c;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+.menu-category-row th {
+  padding-top: 1.4rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px solid rgba(211, 165, 76, .45);
+  background: #201f1a;
+  color: #d3a54c;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+}
+.menu-category-row span {
+  margin-left: .65rem;
+  color: #aaa398;
   font-family: 'Lora', serif;
-  font-size: .76rem;
-  line-height: 1.45;
+  font-size: .82rem;
+  font-style: italic;
+  font-weight: 400;
 }
 .menu-note {
   margin: 3rem auto 0;
@@ -364,24 +366,14 @@ html.leave body {
 
 @media (max-width: 767px) {
   .game-frame-wrap {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 6;
   }
   .menu-section {
     margin-top: 5rem;
   }
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-  .category-title {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .35rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .menu-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .menu-table th,
+  .menu-table td {
+    padding: .85rem 1rem;
   }
 }
 

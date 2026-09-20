@@ -79,7 +79,7 @@
       <div class="game-frame-wrap">
         <iframe
           class="game-frame"
-          src="https://k-maark.github.io/Herkentyu-Burgers/"
+          src="https://k-maark.github.io/flappyburger/flappy-burger.html"
           title="Herkentyű Flappy játék"
           loading="lazy"
           allow="fullscreen"
@@ -94,52 +94,64 @@
         <p class="text-body text-muted">Minden burgerünket friss zöldséggel és házi szósszal készítjük.</p>
       </div>
 
-      <div class="menu-category">
-        <div class="category-title">
-          <h3 class="font-display text-2xl text-cream">Burgerek</h3>
-          <span>100% marhahús</span>
-        </div>
-        <div class="menu-grid">
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Herkentyű Burger</h4><strong>3 490 Ft</strong></div>
-            <p class="ingredients">Marhahúspogácsa, cheddar, saláta, paradicsom, lilahagyma, herkentyű szósz, briós buci.</p>
-            <p class="allergens">Allergének: glutén, tej, tojás, mustár</p>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Rákolló Dupla</h4><strong>4 290 Ft</strong></div>
-            <p class="ingredients">Két marhahúspogácsa, dupla cheddar, csemegeuborka, hagyma, füstös BBQ-szósz, briós buci.</p>
-            <p class="allergens">Allergének: glutén, tej, mustár, zeller</p>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Zöld Hullám</h4><strong>3 290 Ft</strong></div>
-            <p class="ingredients">Ropogós zöldségpogácsa, cheddar, rukkola, paradicsom, avokádókrém, briós buci.</p>
-            <p class="allergens">Allergének: glutén, tej, szója, mustár</p>
-          </article>
-        </div>
-      </div>
-
-      <div class="menu-category">
-        <div class="category-title">
-          <h3 class="font-display text-2xl text-cream">Köretek és frissítők</h3>
-          <span>Jól esik mellé</span>
-        </div>
-        <div class="menu-grid">
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Fűszeres sült burgonya</h4><strong>1 190 Ft</strong></div>
-            <p class="ingredients">Frissen sült burgonyahasáb, tengeri só, füstölt paprika, házi fokhagymás majonéz.</p>
-            <p class="allergens">Allergének: tojás, mustár</p>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Ropogós hagymakarika</h4><strong>1 390 Ft</strong></div>
-            <p class="ingredients">Panírozott hagymakarikák, füstös BBQ-szósz.</p>
-            <p class="allergens">Allergének: glutén, tojás, tej</p>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card-top"><h4>Házi limonádé</h4><strong>890 Ft</strong></div>
-            <p class="ingredients">Citrom, lime, friss menta, szénsavas víz, jég.</p>
-            <p class="allergens">Allergének: nem tartalmaz allergént</p>
-          </article>
-        </div>
+      <div class="menu-table-scroll" tabindex="0" aria-label="Étlap görgethető táblázata">
+        <table class="menu-table">
+          <thead>
+            <tr>
+              <th scope="col">Kategória</th>
+              <th scope="col">Étel</th>
+              <th scope="col">Összetevők</th>
+              <th scope="col">Allergének</th>
+              <th scope="col">Ár</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="menu-category-row"><th colspan="5" scope="rowgroup">Burgerek <span>100% marhahús</span></th></tr>
+            <tr>
+              <td>Burgerek</td>
+              <th scope="row">Herkentyű Burger</th>
+              <td>Marhahúspogácsa, cheddar, saláta, paradicsom, lilahagyma, herkentyű szósz, briós buci.</td>
+              <td>Glutén, tej, tojás, mustár</td>
+              <td class="price">3 490 Ft</td>
+            </tr>
+            <tr>
+              <td>Burgerek</td>
+              <th scope="row">Rákolló Dupla</th>
+              <td>Két marhahúspogácsa, dupla cheddar, csemegeuborka, hagyma, füstös BBQ-szósz, briós buci.</td>
+              <td>Glutén, tej, mustár, zeller</td>
+              <td class="price">4 290 Ft</td>
+            </tr>
+            <tr>
+              <td>Burgerek</td>
+              <th scope="row">Zöld Hullám</th>
+              <td>Ropogós zöldségpogácsa, cheddar, rukkola, paradicsom, avokádókrém, briós buci.</td>
+              <td>Glutén, tej, szója, mustár</td>
+              <td class="price">3 290 Ft</td>
+            </tr>
+            <tr class="menu-category-row"><th colspan="5" scope="rowgroup">Köretek és frissítők <span>Jól esik mellé</span></th></tr>
+            <tr>
+              <td>Köretek</td>
+              <th scope="row">Fűszeres sült burgonya</th>
+              <td>Frissen sült burgonyahasáb, tengeri só, füstölt paprika, házi fokhagymás majonéz.</td>
+              <td>Tojás, mustár</td>
+              <td class="price">1 190 Ft</td>
+            </tr>
+            <tr>
+              <td>Köretek</td>
+              <th scope="row">Ropogós hagymakarika</th>
+              <td>Panírozott hagymakarikák, füstös BBQ-szósz.</td>
+              <td>Glutén, tojás, tej</td>
+              <td class="price">1 390 Ft</td>
+            </tr>
+            <tr>
+              <td>Frissítők</td>
+              <th scope="row">Házi limonádé</th>
+              <td>Citrom, lime, friss menta, szénsavas víz, jég.</td>
+              <td>Nem tartalmaz allergént</td>
+              <td class="price">890 Ft</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <p class="menu-note">Az árak forintban értendők. Ételallergia vagy érzékenység esetén kérjük, rendelés előtt jelezd kollégáinknak.</p>
