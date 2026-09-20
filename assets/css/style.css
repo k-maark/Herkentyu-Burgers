@@ -295,7 +295,7 @@ html.leave body {
 }
 .menu-table {
   width: 100%;
-  min-width: 62rem;
+  min-width: 58rem;
   border-collapse: collapse;
   font-family: 'Lora', serif;
   text-align: left;
@@ -325,11 +325,10 @@ html.leave body {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.menu-table thead th:nth-child(1) { width: 10%; }
-.menu-table thead th:nth-child(2) { width: 19%; }
-.menu-table thead th:nth-child(3) { width: 38%; }
-.menu-table thead th:nth-child(4) { width: 23%; }
-.menu-table thead th:nth-child(5) { width: 10%; }
+.menu-table thead th:nth-child(1) { width: 20%; }
+.menu-table thead th:nth-child(2) { width: 40%; }
+.menu-table thead th:nth-child(3) { width: 30%; }
+.menu-table thead th:nth-child(4) { width: 10%; }
 .menu-table tbody tr:not(.menu-category-row):nth-child(odd) {
   background: rgba(244, 239, 228, .025);
 }
@@ -346,10 +345,6 @@ html.leave body {
   font-family: 'Playfair Display', serif;
   font-size: 1.08rem;
   font-weight: 600;
-  white-space: nowrap;
-}
-.menu-table tbody td:first-child {
-  color: #8f8980;
   white-space: nowrap;
 }
 .menu-table .price {
