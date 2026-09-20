@@ -40,8 +40,8 @@
     var result = { isOpen: isOpen, dayIndex: dayIdx, today: today };
 
     if (isOpen) {
-      result.short = 'Nyitva';
-      result.message = 'Nyitva vagyunk — ma ' + today.close + '-ig tartunk.';
+      result.short = 'Nyitva ' + today.close + '-ig';
+      result.message = 'Nyitva ' + today.close + '-ig';
     } else if (today && today.open && minutesNow < toMinutes(today.open)) {
       result.short = 'Zárva';
       result.message = 'Jelenleg zárva — ma ' + today.open + '-kor nyitunk.';
