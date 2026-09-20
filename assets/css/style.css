@@ -389,43 +389,35 @@ html.leave body {
   letter-spacing: 0;
   vertical-align: middle;
 }
-.menu-warning {
+.menu-warning,
+.menu-info {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .85rem;
-  margin: 1.5rem auto 0;
   max-width: 58rem;
   padding: 1rem 1.25rem;
-  border: 1px solid rgba(201, 109, 93, .5);
   border-radius: .55rem;
-  background: rgba(201, 109, 93, .1);
-  color: #e2a396;
   font-family: 'Lora', serif;
   font-size: .86rem;
   line-height: 1.5;
   text-align: center;
+}
+.menu-warning {
+  margin: 1.5rem auto 0;
+  border: 1px solid rgba(201, 109, 93, .5);
+  background: rgba(201, 109, 93, .1);
+  color: #e2a396;
 }
 .menu-warning strong {
   color: #f0b3a7;
   font-weight: 600;
 }
 .menu-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .85rem;
   margin: .75rem auto 0;
-  max-width: 58rem;
-  padding: 1rem 1.25rem;
   border: 1px solid rgba(88, 166, 220, .58);
-  border-radius: .55rem;
   background: rgba(35, 112, 171, .16);
   color: #abd8f5;
-  font-family: 'Lora', serif;
-  font-size: .86rem;
-  line-height: 1.5;
-  text-align: center;
 }
 .menu-info strong {
   color: #d1edff;
