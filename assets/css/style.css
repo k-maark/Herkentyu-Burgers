@@ -12,9 +12,20 @@ html {
 }
 body {
   background-color: #1c1b17;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-feature-settings: "liga" 1, "kern" 1;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 ::selection {
