@@ -269,7 +269,7 @@ html.leave body {
   overflow: hidden;
   border: 1px solid rgba(211, 165, 76, .35);
   border-radius: .5rem;
-  background: #11110f;
+  background: black;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .28);
 }
 .game-frame {
