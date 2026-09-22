@@ -39,6 +39,15 @@ footer {
   border-radius: 4px;
 }
 
+.text-hover {
+  color:white;
+}
+
+.text-hover:hover {
+  color: rgb(168 159 143 / var(--tw-text-opacity, 1));
+  transition: 2s ease;
+}
+
 /* ---------- nav pills ---------- */
 .pill {
   display: inline-flex;
